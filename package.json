@@ -1,0 +1,12 @@
+{
+  "name": "schema-validator-4ba1cc",
+  "version": "1.0.0",
+  "description": "A schema-validator utility",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node --watch index.js"
+  },
+  "keywords": ["schema-validator", "utility"],
+  "license": "MIT"
+}
